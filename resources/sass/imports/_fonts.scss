@@ -1,0 +1,45 @@
+
+/* FONTS
+----------------------------------------------------------------------------------------------------*/
+
+
+/* General
+---------------------------------------------------------*/
+
+@mixin font-face($name, $path, $weight, $style: 'normal') {
+    @font-face {
+        font-family: $name;
+        font-style: $style;
+        font-weight: $weight;
+        src: url($path + '.eot');
+        src: url($path + '.eot?#iefix') format('embedded-opentype'),
+             url($path + '.woff2') format('woff2'),
+             url($path +'.woff') format('woff'),
+             url($path + '.ttf') format('truetype');
+    }
+}
+
+
+
+
+/* Cursive Standard
+---------------------------------------------------------*/
+
+@include font-face('Cursivestandard', '../fonts/Cursivestandard', 400);
+
+
+
+
+
+/* ARBERKLEY
+---------------------------------------------------------*/
+
+@include font-face('ARBERKLEY', '../fonts/ARBERKLEY', 400);
+
+
+
+
+/* Multicolore
+---------------------------------------------------------*/
+
+@include font-face('Multicolore', '../fonts/Multicolore', 400);

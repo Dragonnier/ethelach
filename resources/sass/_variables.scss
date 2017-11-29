@@ -1,0 +1,81 @@
+
+/* SASS VARIABLES
+----------------------------------------------------------------------------------------------------*/
+
+/* Fonts
+---------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+$Cursive: 'Cursivestandard', $verdana, sans-serif;
+$AR: 'ARBERKLEY', $verdana, sans-serif;
+$Multicolore: 'Multicolore', $verdana, sans-serif;
+$Tahoma: 'Tahoma', $verdana, sans-serif;
+
+$Josefin: 'Josefin Sans', $verdana, sans-serif;
+
+
+
+
+
+/* Colors 
+---------------------------------------------------------*/
+
+$selection:			#c7f9a2 ;
+$bg:				#a9ddf2;
+$text:				#000;
+$link:				#50b5dd;
+$link_hover:		#0c3893;
+$bg_forum_old:		rgba(255,255,255,0.7);
+$bg_subforum_old:	rgba(223,215,215,0.7);
+$bg_forum_new:		rgba(169,221,242,0.7);
+$bg_subforum_new:	rgba(108,181,210,0.7);
+$link_forum_new:	#dd3283;
+$bg_topic_spec_old: rgba(255,235,235,0.7);
+$bg_topic_spec_new: rgba(250,195,195,0.7);
+$bg_topic_norm_old: rgba(255,255,255,0.7);
+$bg_topic_norm_new: rgba(169,221,242,0.7);
+$bg_topic_norm_lock: rgba(209,209,209,0.7);
+$bg_message:		#f7fcfe;
+$bg_separation:		#b49d84;
+$bg_separation2:	#8e7050;
+$info_forum:		#8e8b8c;
+$bg_wrapper_forum:	#cdc1c7;
+$bg2_wrapper_forum:	#f0e3e3;
+$topic_strong:		#8c8c8c;
+$border_poster:		#f66eab;
+$border_rank:		#cfcfcf;
+$text_strong:		#f8ffa4;
+$title1:			#8c0606;
+$title2:			#169a4e;
+$title3:			#0c3893;
+$links_pa:			#2b578d;
+$bg_fast-links:		rgba(255,255,255,0.5);
+$title_qeel:		#1b1e5b;
+$grass:				#b5e07d;
+$grass2:			#9bc762;
+$grass3:			#b4b35c;
+$grass4:			#c5ac5c;
+$grass6:			#ae9c61;
+
+$zorba:				#9e9994;
+$sand_dune:			#816e68;
+
+
+
+
+
+/* Breakpoints
+---------------------------------------------------------*/
+
+$xx-wide: 	   2100px;
+$x-wide: 	   1921px;
+$wide: 		   1681px;
+$normal:	   1441px;
+$small:        1350px;
+$x-small:      1200px;
+$tabletL:      1180px;
+$tablet:       1023px;
+$tabletP:       960px;
+$mobile:        720px;
+$x-mobile:      600px;

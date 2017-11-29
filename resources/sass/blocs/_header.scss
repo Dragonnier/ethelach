@@ -1,0 +1,93 @@
+
+/* HEADER
+----------------------------------------------------------------------------------------------------*/
+
+header {
+	overflow: visible;
+	width: 80%;
+	margin: auto;
+	margin-top: 3rem;
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.header__decors {
+	@include position(absolute, 0 0 null 0);
+	z-index: -1;
+}
+
+.header__cloud1 {
+	@include position(absolute, 3vw null null 2%);
+	z-index: -1;
+	width: 22%;
+	height: 12vw;
+	background: url('../img/cloud_1.png') no-repeat bottom;
+	background-size: 100% auto;
+
+	pointer-events: none;
+}
+
+.header__rainbow {
+	display: none;
+
+	@include position(absolute, 11vw 8% null null);
+	z-index: -1;
+	width: 28%;
+	height: 14vw;
+	background: url('../img/rainbow.png') no-repeat top;
+	background-size: 100% auto;
+
+	pointer-events: none;
+
+	&.visible {
+		display: block;
+	}
+}
+
+.header__cloud2 {
+	@include position(absolute, 18vw 40% null null);
+	z-index: -1;
+	width: 22%;
+	height: 12vw;
+	background: url('../img/cloud_1.png') no-repeat bottom;
+	background-size: 100% auto;
+
+	pointer-events: none;
+
+	transform: translateX(50%) scaleY(-1);
+}
+
+.header__cloud3 {
+	@include position(absolute, 7vw 1% null null);
+	z-index: -1;
+	width: 17%;
+	height: 15vw;
+	background: url('../img/cloud_2.png') no-repeat top;
+	background-size: 100% auto;
+
+	pointer-events: none;
+}
+
+
+#nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 60%;
+	margin: auto;
+	margin-top: 2rem;
+
+	a {
+		position: relative;
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}

@@ -1,0 +1,167 @@
+
+/* QEEL
+----------------------------------------------------------------------------------------------------*/
+
+#qeel {
+	//display: none;
+	@include position(absolute, 0);
+}
+
+.qeel--open {
+	.qeel__wrapper {
+		opacity: 1;
+		z-index: 1;
+		pointer-events: all;
+	}
+}
+
+.qeel__title {
+	overflow: hidden;
+    position: absolute;
+    width: 1px!important;
+    height: 1px!important;
+    clip: rect(1px,1px,1px,1px);
+}
+
+.qeel__wrapper {
+	@include position(absolute, null);
+	z-index: 0;
+	width: 80%;
+	margin: auto;
+
+	background: url('../img/bg_qeel.png') no-repeat top;
+	background-size: 100% auto;
+	opacity: 0;
+
+	text-align: center;
+	pointer-events: none;
+	transition: opacity .4s $ease-out-cubic;
+
+	@include ratio(75%);
+}
+
+.qeel__btn {
+	padding: 0;
+	font-size: 0;
+	background: none;
+	border: none;
+	outline: none;
+
+	@include position(absolute, null -14% 5% null);
+	background: url('../img/qeel.png') no-repeat center;
+	background-size: 100% auto;
+	width: 8vw;
+	height: 8vw;
+}
+
+.qeel__subtitle {
+	font-family: $Multicolore;
+	font-size: 1.6vw;
+	text-align: center;
+	color: $title_qeel;
+}
+
+.qeel__personnel {
+	@include position(absolute, 4% null null 5%);
+	width: 42%;
+	height: 85%;
+
+	perspective: 10vw;
+
+	&::before {
+		content: '';
+		display: block;
+		@include position(absolute, 0);
+		border: 0.2rem solid $title_qeel;
+		border-radius: 0.5rem;
+
+		transform: rotateY(1deg);
+		transform-style: preserve-3d;
+	}
+
+	.qeel__subtitle {
+		transform: rotate(1.5deg);
+	}
+}
+
+.qeel__personnel__content {
+	overflow: auto;
+	position: relative;
+	z-index: 1;
+	height: 88%;
+	margin: 2rem;
+	margin-top: 1rem;
+
+	p {
+		margin-top: 2rem;
+	}
+
+	a {
+		font-family: $Cursive;
+		font-size: 2.4rem;
+		line-height: 0;
+	}
+}
+
+.qeel__online {
+	@include position(absolute, 4.5% 5% null null);
+	width: 42%;
+	height: 25%;
+	padding: 0 1rem;
+
+	border: 0.2rem solid $title_qeel;
+	border-radius: 0.5rem;
+
+	transform: rotate(-1deg);
+
+	&::after {
+		content: '';
+		display: block;
+
+		@include position(absolute, null -3% -8% null);
+		width: 18%;
+		height: 38%;
+		background: url('../img/qeel_online.png') no-repeat center;
+		background-size: 100% auto;
+
+		pointer-events: none;
+	}
+}
+
+.qeel__online__content {
+	overflow: auto;
+	height: 75%;
+}
+
+.qeel__stats {
+	overflow: auto;
+	@include position(absolute, 35% 2% null null);
+	width: 46%;
+	height: 25%;
+
+	line-height: 2;
+
+	strong {
+		font-family: $Cursive;
+		font-size: 1.8rem;
+		font-weight: normal;
+		text-decoration: underline;
+	}
+}
+
+.qeel__yesterday {
+	@include position(absolute, 63.5% 5% null null);
+	width: 42%;
+	height: 25%;
+	padding: 0 1rem;
+
+	border: 0.2rem solid $title_qeel;
+	border-radius: 0.5rem;
+
+	transform: rotate(1deg);
+}
+
+.qeel__yesterday__content {
+	overflow: auto;
+	height: 75%;
+}

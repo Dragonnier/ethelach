@@ -1,0 +1,83 @@
+<!-- INCLUDE overall_header.html -->
+
+{% for forum in forumrow %}
+	{% if loop.first %}
+		<section class="index__cate index__cate--first">
+	{% endif %}
+
+	{% if not forum.S_IS_CAT %}
+		<section class="index__forum index__forum--{{ loop.index0 }}">
+			<div class="index__forum__bg index__forum__bg--active"></div>
+			<button class="index__forum__btn" type="button">{{ forum.FORUM_NAME }}</button>
+			<div class="index__forum__ctn">
+				<div class="index__forum__content">
+					<a href="{forum.U_VIEWFORUM}" class="index__forum__title">{forum.FORUM_NAME}</a>
+					<div class="index__forum__description">
+						{forum.FORUM_DESC}
+					</div>
+					<ul class="index__forum__subforums">
+						{% if forum.S_LIST_SUBFORUMS %}
+							{% for sub in forum.subforum %}
+								<li class="index__forum__subforum"><a href="{sub.U_SUBFORUM}" class="subforum{% if sub.S_UNREAD %} unread{% else %} read{% endif %}" title="{% if sub.S_UNREAD %}{L_UNREAD_POSTS}{% else %}{L_NO_UNREAD_POSTS}{% endif %}">
+									<i class="icon-subforum" aria-hidden="true"></i>{sub.SUBFORUM_NAME}</a></li>
+							{% endfor %}
+						{% endif %}
+					</ul>
+				</div>
+			</div>
+		</section>
+	{% endif %}
+
+	{% if forum.S_LAST_ROW %}
+		</section>
+	{% endif %}
+{% endfor %}
+
+<!-- EVENT index_body_forumlist_body_after -->
+
+<!-- EVENT index_body_stat_blocks_before -->
+
+<div id="qeel">
+<!-- IF S_DISPLAY_ONLINE_LIST -->
+	<div class="stat-block online-list">
+		<!-- IF U_VIEWONLINE --><h3><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h3><!-- ELSE --><h3>{L_WHO_IS_ONLINE}</h3><!-- ENDIF -->
+		<p>
+			<!-- EVENT index_body_block_online_prepend -->
+			{TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}<br /> 
+			<!-- IF U_VIEWONLINE -->
+				<br />{LOGGED_IN_USER_LIST}
+				<!-- IF LEGEND --><br /><em>{L_LEGEND}{L_COLON} {LEGEND}</em><!-- ENDIF -->
+			<!-- ENDIF -->
+			<!-- EVENT index_body_block_online_append -->
+		</p>
+	</div>
+<!-- ENDIF -->
+
+<!-- EVENT index_body_birthday_block_before -->
+
+<!-- IF S_DISPLAY_BIRTHDAY_LIST -->
+	<div class="stat-block birthday-list">
+		<h3>{L_BIRTHDAYS}</h3>
+		<p>
+			<!-- EVENT index_body_block_birthday_prepend -->
+			<!-- IF .birthdays -->{L_CONGRATULATIONS}{L_COLON} <strong><!-- BEGIN birthdays -->{birthdays.USERNAME}<!-- IF birthdays.AGE !== '' --> ({birthdays.AGE})<!-- ENDIF --><!-- IF not birthdays.S_LAST_ROW -->, <!-- ENDIF --><!-- END birthdays --></strong><!-- ELSE -->{L_NO_BIRTHDAYS}<!-- ENDIF -->
+			<!-- EVENT index_body_block_birthday_append -->
+		</p>
+	</div>
+<!-- ENDIF -->
+
+<!-- IF NEWEST_USER -->
+	<div class="stat-block statistics">
+		<h3>{L_STATISTICS}</h3>
+		<p>
+			<!-- EVENT index_body_block_stats_prepend -->
+			{TOTAL_POSTS} &bull; {TOTAL_TOPICS} &bull; {TOTAL_USERS} &bull; {NEWEST_USER}
+			<!-- EVENT index_body_block_stats_append -->
+		</p>
+	</div>
+<!-- ENDIF -->
+</div>
+
+<!-- EVENT index_body_stat_blocks_after -->
+
+<!-- INCLUDE overall_footer.html -->

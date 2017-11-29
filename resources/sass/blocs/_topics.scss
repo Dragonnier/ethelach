@@ -1,0 +1,153 @@
+
+/* TOPICS
+----------------------------------------------------------------------------------------------------*/
+
+.content__forum {
+	position: relative;
+	background-color: $bg_wrapper_forum;
+
+	&::before {
+		content: '';
+		@include position(absolute, 0 15%);
+		background-color: $bg2_wrapper_forum;
+	}
+
+	&::after {
+		content: '';
+		@include position(absolute, 0 0);
+		background: url('../img/floor.png') no-repeat bottom;
+	}
+}
+
+#topics {
+	position: relative;
+	z-index: 1;
+	width: 68%;
+	margin: auto;
+	padding: 2rem 0;
+}
+
+.topics__list {
+	width: 100%;
+	margin-top: 2rem;
+}
+
+.topics__topic {
+	td {
+		width: 100%;
+	}
+}
+
+.topic {
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+
+	position: relative;
+	margin-bottom: 1rem;
+	padding: 1rem;
+	background-color: $bg_topic_norm_old;
+
+	font-size: 1.1rem;
+
+	a, a:visited, a:link { color: $text; }
+
+	&--new {
+		background-color: $bg_topic_norm_new;
+	}
+
+	&--ann-new {
+		background-color: $bg_topic_spec_new;
+	}
+
+	&--old {
+		background-color: $bg_topic_norm_old;
+	}
+
+	&--ann-old {
+		background-color: $bg_topic_spec_old;
+	}
+
+	&--lock {
+		background-color: $bg_topic_norm_lock;
+	}
+}
+
+.topic__infos, .topic__stats {
+}
+
+.topic__status {
+	overflow: hidden;
+    position: absolute;
+    width: 1px!important;
+    height: 1px!important;
+    clip: rect(1px,1px,1px,1px);
+}
+
+.topic__title {
+	font-size: 1.2rem;
+	font-weight: normal;
+
+	strong {
+		font-family: $Multicolore;
+		font-weight: bold;
+		color: $topic_strong;
+	}
+}
+
+.topic__autor, .topic__rep {
+	font-family: $Multicolore;
+	font-size: 1rem;
+	color: $topic_strong;
+}
+
+.topic__description {
+	font-size: 1rem;
+	font-style: italic;
+	text-transform: initial;
+}
+
+.topic__stats {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 20rem;
+	padding: 0 0.5rem;
+	text-align: right;
+}
+
+.topic__tree {
+	font-family: $Multicolore;
+	font-size: 1rem;
+	font-style: normal;
+	color: $topic_strong;
+}
+
+.topics__top {
+	&:first-child {
+		@include position(relative, null null null -1%);
+		width: 102%;
+		height: 5rem;
+
+		background-color: $bg_separation;
+		border-radius: 0.6vw;
+	}
+}
+
+.subtopics {
+	@include position(relative, null null null -1%);
+	width: 102%;
+	padding: 1rem;
+
+	background-color: $bg_separation;
+	border-radius: 0.6vw;
+
+	> * {
+		opacity: 0.6;
+	}
+
+	a {
+		color: $text;
+	}
+}

@@ -1,0 +1,142 @@
+/*** MISES EN PAGES PREDEFINIES ***/
+
+.wrapper-box-msg,
+fieldset.mep_olympiades,
+fieldset.msop {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    margin-top: 4rem;
+}
+
+fieldset.mep_olympiades,
+fieldset.msop {
+    padding-top: 150px;
+}
+
+.wrapper-box-msg .type-msg,
+fieldset.mep_olympiades legend,
+fieldset.msop legend {
+    @include position(absolute, -1.4rem 20% null null);
+    text-transform: uppercase;
+}
+
+.wrapper-box-msg .titre,
+fieldset.mep_olympiades table.titre_msop,
+fieldset.msop table.titre_msop {
+    box-sizing: border-box;
+    display: table;
+    border-top: 0.2rem solid $title1;
+    border-bottom: 0.2rem solid $title1;
+
+    @include position(absolute, 0 0 null 0);
+    z-index: 1;
+    height: 15rem;
+    width: 60%;
+    margin: auto;
+
+    font-family: $Cursive;
+    font-size: 4.5rem;
+    text-align: center;
+    color: $text;
+}
+
+.wrapper-box-msg .titre > span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+fieldset.mep_olympiades table.titre_msop td,
+fieldset.msop table.titre_msop td {
+    vertical-align: middle !important;
+}
+
+.wrapper-box-msg .sous-titre {
+    @include position(absolute, 15rem 0 null 0);
+    font-size: 1.4rem;
+    text-transform: small-caps;
+    text-align: center;
+}
+
+.wrapper-box-msg .box-msg {
+    margin: 10rem auto 0;
+    text-align: justify;
+    width: 95%;
+}
+
+.wrapper-box-msg .box-msg p {
+    margin-bottom: 9px;
+}
+
+fieldset.mep_olympiades span.postbody,
+fieldset.msop span.postbody {
+    font-size: 12px!important;
+    border: 0;
+}
+
+fieldset.msop img,
+fieldset.mep_olympiades img {
+    width: auto;
+    max-width: 580px;
+}
+
+fieldset.msop table.tabAnniv {
+    width: 90%;
+    margin: auto;
+    border: 1px solid;
+}
+
+fieldset.msop table.tabAnniv tr.dateAnniv {
+    text-align: center;
+}
+
+.wrapper-box-msg .blkq {
+    background: rgba(48, 41, 39, 0.2);
+    border: 1px dotted #302927;
+    margin: auto;
+    padding: 1%;
+    width: 90%;
+}
+
+/*** TITRES ***/
+
+.titre1 {
+    position: relative;
+    box-sizing: border-box;
+
+    margin-top: 1rem;
+    padding: 0 0 0 4rem;
+    text-align: left;
+
+    font-family: $Cursive;
+    font-size: 4rem;
+    color: $title1;
+}
+
+.titre2 {
+    position: relative;
+    box-sizing: border-box;
+
+    margin-top: 1rem;
+    padding: 0 0 0 7rem;
+    text-align: left;
+
+    font-family: $Cursive;
+    font-size: 3.5rem;
+    color: $title2;
+}
+
+.titre3 {
+    margin-top: 1rem;
+    padding: 0 0 0 10rem;
+    text-align: left;
+
+    font-family: $Cursive;
+    font-size: 3rem;
+    color: $title3;
+}
+
+.titre4{
+    color: #5c5a5c;
+    font-size: 12px;
+}

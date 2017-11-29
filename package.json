@@ -1,0 +1,35 @@
+{
+  "name": "sop-rentree2017",
+  "version": "1.0.0",
+  "description": "SoP Design Rentree 2017",
+  "author": "Dragonnier",
+  "private": true,
+  "scripts": {
+    "prod": "gulp --production",
+    "dev": "gulp watch"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-gm": "0.0.8",
+    "gulp-rename": "^1.2.2",
+    "handlebars": "^4.0.10",
+    "handlebars-template-loader": "^0.8.0",
+    "json-loader": "^0.5.4",
+    "laravel-elixir": "^6.0.0-15",
+    "laravel-elixir-browsersync-official": "^1.0.0",
+    "laravel-elixir-webpack-official": "^1.0.2",
+    "babel-eslint": "^7.0.0",
+    "eslint": "^3.7.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1"
+  },
+  "dependencies": {
+    "gsap": "^1.20.2",
+    "highlight.js": "^9.12.0",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "npm": "^5.3.0"
+  }
+}

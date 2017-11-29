@@ -1,0 +1,578 @@
+
+/* FA CSS
+----------------------------------------------------------------------------------------------------*/
+
+.table-forum {
+	width: 100%;
+	margin-top: 10px;
+}
+
+.nav {
+	img {
+		display: none;
+	}
+
+	.forum__title__text {
+	    position: relative;
+	    width: auto!important;
+	    height: auto!important;
+    }
+
+    h1 {
+        display: inline;
+    }
+}
+
+.btn-msg {
+	text-align: right;
+}
+
+.forumline {
+	background: url('../img/sheet.png') repeat-y;
+    background-position: 2.5rem top;
+    background-color: $bg_message;
+    border: none;
+    border-radius: 0.5rem 2rem 2rem 0.5rem;
+
+    td {
+        padding: 1rem;
+        vertical-align: middle;
+    }
+}
+
+.row1 img, .row2 img {
+	max-width: 100px;
+}
+
+.sceditor-button, .sceditor-button div {
+    box-sizing: content-box;
+}
+
+.sceditor-container textarea {
+    margin: 0!important;
+    padding: 0.5rem!important;
+}
+
+.rules {
+    box-shadow: 1px 1px 9px 3px white;
+}
+
+#plus_menu {
+    z-index: 99!important;
+}
+
+.avatar.mini, .avatar.mini img {
+    max-height: 4rem!important;
+    max-width: 4rem!important;
+}
+
+#page-footer {
+    margin-top: 5rem;
+}
+
+table {
+    td {
+        vertical-align: top;
+    }
+}
+
+.invisible {
+    overflow: hidden;
+    position: absolute;
+    width: 1px!important;
+    height: 1px!important;
+    clip: rect(1px,1px,1px,1px);
+}
+
+
+/***----- EDITEUR TEXTE -----***/
+
+.sceditor-container textarea {
+    width: 100% !important;
+}
+
+/* Spoiler */
+.spoiler_closed {
+    display:block;
+    font-family: Verdana;
+    font-size: 11px;
+    color: #000000;
+    line-height: 125%;
+    border-style: solid;
+    border-left-width: 1px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    }
+.spoiler_closed.hidden {
+    display:none;
+    }
+.spoiler_content {
+    display:block;
+    font-family: Verdana;
+    font-size: 11px;
+    color: #000000;
+    line-height: 125%;
+    border-style: solid;
+    border-left-width: 1px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    }
+.spoiler_content.hidden {
+    display:none;
+}
+
+
+/***----- CODE, CITATION -----***/
+
+.codebox {
+    max-width: 800px;
+}
+
+.spoiler, .hidecode, .quote {
+    background-color: #fff;
+    overflow: auto;
+    padding: 5px;
+}
+
+.codebox.spoiler,
+.codebox.spoiler dd,
+.codebox.spoiler .spoiler_content {
+    border: 0;
+}
+
+.codebox.spoiler .spoiler_closed {
+    padding: 0;
+}
+
+.code div.cont_code {
+    word-break: break-all;
+}
+
+.codebox.spoiler .spoiler_content {
+    background: transparent;
+}
+
+
+
+.table,
+.tab {
+    display: table;
+    font-size: 0;
+    width: 100%;
+}
+
+.ie7 table {
+    display: block;
+}
+
+.table-cell,
+.cell {
+    display: table-cell;
+    font-size: 12px;
+}
+
+.three-cell {
+    width: 33%;
+}
+
+.two-cell {
+    width: 50%;
+}
+
+.ie7 .table-cell {
+    float: left;
+}
+
+.clr:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.ie7 .clr {
+    zoom: 1;
+}
+
+.ie7 .info-ie7 {
+    background: #F3D300;
+}
+
+.elt-declancheur:hover {
+    cursor: pointer;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+hr {
+    border-color: #b6b6b6 !important;
+}
+
+.hide {
+    display: none;
+}
+
+
+
+
+/* Couleurs Staff */
+.direction,
+a.direction{
+    color:#990021 !important;
+}
+
+.assistant,
+a.assistant{
+    color:#AB3300 !important;
+}
+
+.surveillant,
+a.surveillant{
+    color:#008282 !important;
+}
+
+.artiste,
+a.artiste{
+    color:#96026C !important;
+}
+
+.inspecteur,
+a.inspecteur{
+    color:#400078 !important;
+}
+
+.pitre,
+a.pitre{
+    color:#092CB8 !important;
+}
+
+.intervenant,
+a.intervenant{
+    color:#077507 !important;
+}
+
+.doyen,
+a.doyen{
+    color:#592800 !important;
+}
+
+.etudiant,
+a.etudiant{
+    color:#606568 !important;
+}
+
+/***------ ETAT DES SERVICES ------***/
+
+.service-ouvert {
+    color: #15720b;
+}
+
+.service-ferme {
+    color: #8d0000;
+}
+
+
+/**** Sprite CSS ****/
+.sprite-arrow_prosilver_down{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:0 0;
+    width:6px;
+    height:6px;
+    }
+.sprite-arrow_prosilver_left{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-56px 0;
+    width:4px;
+    height:6px;
+    }
+.sprite-arrow_prosilver_right{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-110px 0;
+    width:4px;
+    height:6px;
+    }
+.sprite-arrow_prosilver_up{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-164px 0;
+    width:6px;
+    height:6px;
+    }
+.sprite-arrow_subsilver_down{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-220px 0;
+    width:9px;
+    height:9px;
+    }
+.sprite-arrow_subsilver_left{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-279px 0;
+    width:9px;
+    height:9px;
+    }
+.sprite-arrow_subsilver_right{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-338px 0;
+    width:9px;
+    height:9px;
+    }
+.sprite-arrow_subsilver_up{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-397px 0;
+    width:9px;
+    height:9px;
+    }
+.sprite-icon_minipost{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-456px 0;
+    width:12px;
+    height:9px;
+    }
+.sprite-icon_minipost_new{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-518px 0;
+    width:12px;
+    height:9px;
+    }
+.sprite-icon_minipost_participate{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-580px 0;
+    width:12px;
+    height:9px;
+    }
+.sprite-icon_miniposted{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-642px 0;
+    width:12px;
+    height:9px;
+    }
+.sprite-icon_pages{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-704px 0;
+    width:11px;
+    height:12px;
+    }
+.sprite-icon_post_target{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-765px 0;
+    width:11px;
+    height:9px;
+    }
+.sprite-icon_post_target_unread{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-826px 0;
+    width:11px;
+    height:9px;
+    }
+.sprite-icon_reply{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-887px 0;
+    width:18px;
+    height:9px;
+    }
+.sprite-icon_reply_new{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-955px 0;
+    width:18px;
+    height:9px;
+    }
+.sprite-icon_tiny_topic{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-1023px 0;
+    width:10px;
+    height:11px;
+    }
+.sprite-icon_topic_latest{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-1083px 0;
+    width:11px;
+    height:9px;
+    }
+.sprite-icon_topic_newest{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-1144px 0;
+    width:11px;
+    height:9px;
+    }
+.sprite-subforum_read{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-1205px 0;
+    width:11px;
+    height:9px;
+    }
+.sprite-subforum_unread{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-1266px 0;
+    width:11px;
+    height:9px;
+    }
+.sprite-tabs_less{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-1327px 0;
+    width:9px;
+    height:9px;
+    }
+.sprite-tabs_more{
+    background:url("https://illiweb.com/fa/sprite_icons.png") no-repeat top left;
+    background-position:-1386px 0;
+    width:9px;
+    height:9px;
+    }
+.sprite-icon_calendar{
+    background:url("https://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;
+    background-position:0 0;
+    width:14px;
+    height:13px;
+    }
+.sprite-icon_faq{
+    background:url("https://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;
+    background-position:0 -63px;
+    width:16px;
+    height:14px;
+    }
+.sprite-icon_gallery{
+    background:url("https://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;
+    background-position:0 -127px;
+    width:14px;
+    height:14px;
+    }
+.sprite-icon_groups{
+    background:url("https://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;
+    background-position:0 -191px;
+    width:16px;
+    height:14px;
+    }
+.sprite-icon_home{
+    background:url("https://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;
+    background-position:0 -255px;
+    width:13px;
+    height:12px;
+    }
+.sprite-icon_logout{
+    background:url("https://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;
+    background-position:0 -317px;
+    width:16px;
+    height:14px;
+    }
+.sprite-icon_members{
+    background:url("https://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;
+    background-position:0 -381px;
+    width:16px;
+    height:14px;
+    }
+.sprite-icon_message{
+    background:url("https://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;
+    background-position:0 -445px;
+    width:16px;
+    height:14px;
+    }
+.sprite-icon_portal{
+    background:url("https://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;
+    background-position:0 -509px;
+    width:14px;
+    height:14px;
+    }
+.sprite-icon_register{
+    background:url("https://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;
+    background-position:0 -573px;
+    width:16px;
+    height:14px;
+    }
+.sprite-icon_search{
+    background:url("https://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;
+    background-position:0 -637px;
+    width:16px;
+    height:14px;
+    }
+.sprite-icon_textbox_search{
+    background:url("https://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;
+    background-position:0 -701px;
+    width:16px;
+    height:14px;
+    }
+.sprite-icon_ucp{
+    background:url("https://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;
+    background-position:0 -765px;
+    width:16px;
+    height:14px;
+    }
+.sprite-icon_mini_calendar{
+    background:url("https://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;
+    background-position:0 0;
+    width:12px;
+    height:13px;
+    }
+.sprite-icon_mini_faq{
+    background:url("https://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;
+    background-position:-62px 0;
+    width:12px;
+    height:13px;
+    }
+.sprite-icon_mini_gallery{
+    background:url("https://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;
+    background-position:-124px 0;
+    width:12px;
+    height:13px;
+    }
+.sprite-icon_mini_groups{
+    background:url("https://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;
+    background-position:-186px 0;
+    width:12px;
+    height:13px;
+    }
+.sprite-icon_mini_index{
+    background:url("https://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;
+    background-position:-248px 0;
+    width:13px;
+    height:13px;
+    }
+.sprite-icon_mini_login{
+    background:url("https://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;
+    background-position:-311px 0;
+    width:12px;
+    height:13px;
+    }
+.sprite-icon_mini_members{
+    background:url("https://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;
+    background-position:-373px 0;
+    width:12px;
+    height:13px;
+    }
+.sprite-icon_mini_message{
+    background:url("https://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;
+    background-position:-435px 0;
+    width:12px;
+    height:13px;
+    }
+.sprite-icon_mini_portal{
+    background:url("https://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;
+    background-position:-497px 0;
+    width:13px;
+    height:13px;
+    }
+.sprite-icon_mini_profile{
+    background:url("https://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;
+    background-position:-560px 0;
+    width:12px;
+    height:13px;
+    }
+.sprite-icon_mini_register{
+    background:url("https://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;
+    background-position:-622px 0;
+    width:12px;
+    height:13px;
+    }
+.sprite-icon_mini_search{
+    background:url("https://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;
+    background-position:-684px 0;
+    width:12px;
+    height:13px;
+    }
+#search_menu a img{
+    background:url("https://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;
+    background-position:-684px 0;
+    width:12px;
+    height:13px;
+    }

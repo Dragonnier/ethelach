@@ -1,0 +1,165 @@
+
+/* SEASONS
+----------------------------------------------------------------------------------------------------*/
+
+.season2 {
+	.forum {
+		&:nth-child(0n + 8) {
+			&::after { background-image: url('../img/grass2.png'); }
+		}
+	}
+
+	.forum__separation {
+		&:nth-child(0n + 7) {
+			background-image: url('../img/subbiblio2.png');
+		}
+
+		&:nth-child(0n + 9) {
+			background-image: url('../img/bg_extras2.png');
+			background-color: $grass2;
+
+			&::before { background-image: url('../img/tree2.png'); }
+
+			&::after { background-image: url('../img/subgrass2.png'); }
+		}
+	}
+
+	.qeel__btn {
+		background-image: url('../img/qeel2.png');
+	}
+}
+
+.season3 {
+	.forum {
+		&:nth-child(0n + 8) {
+			&::after { background-image: url('../img/grass3.png'); }
+		}
+	}
+
+	.forum__separation {
+		&:nth-child(0n + 7) {
+			background-image: url('../img/subbiblio3.png');
+		}
+
+		&:nth-child(0n + 9) {
+			background-image: url('../img/bg_extras3.png');
+			background-color: $grass3;
+
+			&::before { background-image: url('../img/tree3.png'); }
+
+			&::after { background-image: url('../img/subgrass3.png'); }
+		}
+	}
+
+	.qeel__btn {
+		background-image: url('../img/qeel3.png');
+	}
+}
+
+.season4 {
+	.forum {
+		&:nth-child(0n + 8) {
+			&::after { background-image: url('../img/grass4.png'); }
+		}
+	}
+
+	.forum__separation {
+		&:nth-child(0n + 7) {
+			background-image: url('../img/subbiblio4.png');
+		}
+
+		&:nth-child(0n + 9) {
+			background-image: url('../img/bg_extras4.png');
+			background-color: $grass4;
+
+			&::before { background-image: url('../img/tree4.png'); }
+
+			&::after { background-image: url('../img/subgrass4.png'); }
+		}
+	}
+
+	.qeel__btn {
+		background-image: url('../img/qeel4.png');
+	}
+}
+
+.season5 {
+	.forum {
+		&:nth-child(0n + 8) {
+			&::after { background-image: url('../img/grass4.png'); }
+		}
+	}
+
+	.forum__separation {
+		&:nth-child(0n + 7) {
+			background-image: url('../img/subbiblio4.png');
+		}
+
+		&:nth-child(0n + 9) {
+			background-image: url('../img/bg_extras4.png');
+			background-color: $grass4;
+
+			&::before { background-image: url('../img/tree5.png'); }
+
+			&::after { background-image: url('../img/subgrass4.png'); }
+		}
+	}
+
+	.qeel__btn {
+		background-image: url('../img/qeel4.png');
+	}
+}
+
+.season6 {
+	.forum {
+		&:nth-child(0n + 8) {
+			&::after { background-image: url('../img/grass6.png'); }
+		}
+	}
+
+	.forum__separation {
+		&:nth-child(0n + 7) {
+			background-image: url('../img/subbiblio6.png');
+		}
+
+		&:nth-child(0n + 9) {
+			background-image: url('../img/bg_extras6.png');
+			background-color: $grass6;
+
+			&::before { background-image: url('../img/tree6.png'); }
+
+			&::after { background-image: url('../img/subgrass6.png'); }
+		}
+	}
+
+	.qeel__btn {
+		background-image: url('../img/qeel6.png');
+	}
+}
+
+.season7 {
+	.forum {
+		&:nth-child(0n + 8) {
+			&::after { background-image: url('../img/grass6.png'); }
+		}
+	}
+
+	.forum__separation {
+		&:nth-child(0n + 7) {
+			background-image: url('../img/subbiblio6.png');
+		}
+
+		&:nth-child(0n + 9) {
+			background-image: url('../img/bg_extras6.png');
+			background-color: $grass6;
+
+			&::before { right: 78%; background-image: url('../img/tree7.png'); }
+
+			&::after { background-image: url('../img/subgrass6.png'); }
+		}
+	}
+
+	.qeel__btn {
+		background-image: url('../img/qeel6.png');
+	}
+}

@@ -1,0 +1,82 @@
+
+/* FAST LINKS
+----------------------------------------------------------------------------------------------------*/
+
+.fast-links {
+    display: flex;
+    flex-direction: column;
+
+    @include position(fixed, 20% 0 null null);
+    z-index: 999;
+
+    a {
+        margin-bottom: 0.7rem;
+        opacity: 0.3;
+
+        transform: translateX(100%);
+        transition: .4s $ease-out-cubic;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    @include maxw($x-small) {
+        display: none;
+    }
+}
+
+
+.fast-links__more {
+    overflow: hidden;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+	margin: 0 1rem;
+    margin-left: auto;
+
+	background-color: $bg_fast-links;
+    border-radius: 1rem;
+
+    line-height: 1;
+    text-align: center;
+
+    transform: translateX(calc(100% + 2rem));
+    transition: .4s $ease-out-cubic;
+
+    a {
+        opacity: 1;
+        font-size: 1rem;
+        color: $text;
+    }
+
+    &--open {
+        width: 21rem;
+        height: 10.5rem;
+    }
+}
+
+.fast-links__more__btn {
+    @include position(absolute, -0.1rem -0.28rem null null);
+    z-index: 1;
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: $Cursive;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.fast-links__more__wrapper {
+    @include position(absolute, 0);
+    width: 21rem;
+    height: 10.5rem;
+    padding: 1rem 0;
+}
+
+.fast-links__networks {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 3rem;
+}

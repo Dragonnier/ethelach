@@ -1,0 +1,107 @@
+/***------ FOOTER ------***/
+
+#footer {
+    position: relative;
+    z-index: 1;
+    
+    margin: 5rem 0;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.footer__bann {
+    margin-top: 2.5rem;
+}
+
+.footer__logos {
+    display: flex;
+    justify-content: space-around;
+    width: 66%;
+    margin: auto;
+    margin-top: 2rem;
+
+    h3 {
+        font-family: $Cursive;
+        font-size: 4rem;
+        font-weight: normal;
+
+        @include maxw($x-small) {
+            font-size: 3rem;
+        }
+    }
+}
+
+.footer__logos__sopiens, .footer__logos__corres {
+    width: 40%;
+}
+
+.footer__logos__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+
+    margin-top: -1rem;
+
+    a {
+        margin: 0.2rem;
+    }
+}
+
+.footer__blocs {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    @include maxw($x-small) {
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        padding-top: 10rem;
+        padding-bottom: 5rem;
+        padding-left: 5rem;
+    }
+}
+
+.blocsBas {
+    &:nth-child(4n + 1) {
+        @include position(absolute, 5vw auto auto 6vw);
+        transform: rotate(15deg);
+
+        @include maxw($x-small) {
+            @include position(relative, 0);
+            transform: none;
+        }
+    }
+
+    &:nth-child(4n + 2) {
+        @include position(absolute, 5.5vw auto auto 19vw);
+        transform: rotate(-10deg);
+
+        @include maxw($x-small) {
+            @include position(relative, 0);
+            transform: none;
+        }
+    }
+
+    &:nth-child(4n + 3) {
+        @include position(absolute, 4vw auto auto 31vw);
+        transform: rotate(-5deg);
+
+        @include maxw($x-small) {
+            @include position(relative, 0);
+            transform: none;
+        }
+    }
+
+    &:nth-child(4n) {
+        @include position(absolute, 3.5vw auto auto 43vw);
+
+        @include maxw($x-small) {
+            @include position(relative, 0);
+            transform: none;
+        }
+    }
+}

@@ -1,0 +1,140 @@
+
+/* MIXINS
+----------------------------------------------------------------------------------------------------*/
+
+/* Media Queries
+---------------------------------------------------------*/
+
+@mixin desktop {
+	@media only screen and (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media only screen and (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin smartphone {
+	@media only screen and (max-width: 415px) {
+		@content;
+	}
+}
+
+@mixin tabletPortrait {
+	@media only screen and (max-width: 1023px) and (min-width: 721px) {
+		@content;
+	}
+}
+
+@mixin smartphone-landscape {
+	@media only screen and (orientation: landscape) and (max-height: 600px) {
+		@content;
+	}
+}
+
+@mixin device-landscape {
+	@media only screen and (orientation: landscape) and (min-width: 415px) {
+		@content;
+	}
+}
+
+@mixin device-portrait {
+	@media only screen and (orientation: portrait) {
+		@content;
+	}
+}
+
+////
+
+@mixin minw($val) {
+	@media only screen and (min-width: $val) {
+		@content;
+	}
+}
+
+@mixin maxw($val) {
+	@media only screen and (max-width: $val) {
+		@content;
+	}
+}
+
+@mixin minh($val) {
+	@media only screen and (min-height: $val) {
+		@content;
+	}
+}
+
+@mixin maxh($val) {
+	@media only screen and (max-height: $val) {
+		@content;
+	}
+}
+
+@mixin minw-maxh($w, $h) {
+	@media only screen and (min-width: $w) and (max-height: $h) {
+		@content;
+	}
+}
+
+@mixin minw-minh($w,$h) {
+	@media only screen and (min-width: $w) and (min-height: $h) {
+		@content;
+	}
+}
+
+@mixin maxw-maxh($w, $h) {
+	@media only screen and (max-width: $w) and (max-height: $h) {
+		@content;
+	}
+}
+
+@mixin minw-maxw($w1, $w2) {
+	@media only screen and(min-width: $w1) and (max-width: $w2) {
+		@content;
+	}
+}
+
+
+
+
+/* TEXT-RELATED
+----------------------------------------------------------------------------------------------------*/
+
+@mixin font-smoothing($value: on) {
+    @if $value == on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}
+
+
+
+
+/* SIZING
+----------------------------------------------------------------------------------------------------*/
+
+@mixin ratio($val, $element: div, $offset: 0px) {
+	position: relative;
+
+	@if $element != none {
+		> #{$element} {
+			@include position(absolute, $offset);
+		}
+	}
+
+	&::before {
+		content: "";
+		display: block;
+		padding-top: $val;
+	}
+}
+
+
+

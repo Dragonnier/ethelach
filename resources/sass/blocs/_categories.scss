@@ -1,0 +1,468 @@
+
+/* CATEGORIES
+----------------------------------------------------------------------------------------------------*/
+
+.forums__roof {
+	position: relative;
+	width: 100%;
+	height: 20vw;
+	margin-top: -5vw;
+	padding-bottom: 1vw;
+
+	background: url('../img/roof.png') no-repeat bottom;
+	background-size: 100% auto;
+
+	font-size: 1.1rem;
+
+	table {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	td {
+		padding: 0 1rem;
+		padding-top: 17vw;
+		vertical-align: middle;
+	}
+
+	.big_needle {
+		@include position(absolute, 30% 50% 46.2% null);
+		background: url('../img/big_needle.png') no-repeat center;
+		background-size: auto 100%;
+		width: 1%;
+		pointer-events: none;
+
+		transform: translateX(50%);
+		transform-origin: bottom;
+	}
+
+	.small_needle {
+		@include position(absolute, 40% 50% 46.2% null);
+		background: url('../img/small_needle.png') no-repeat center;
+		background-size: auto 100%;
+		width: 1%;
+		pointer-events: none;
+
+		transform: translateX(50%);
+		transform-origin: bottom;
+	}
+
+	@include maxw($x-small) {
+		height: 24vw;
+
+		td {
+			padding-top: 20.5vw;
+		}
+	}
+
+	.content__forum & {
+		height: auto;
+		width: 102%;
+		left: -1%;
+		z-index: 2;
+		margin: 0;
+		padding: 0;
+
+		background: none;
+		background-color: $bg_separation;
+		border-radius: 0.6vw;
+
+		table {
+			position: relative;
+			height: auto;
+			opacity: 0.6;
+		}
+
+		td {
+			padding: 1rem;
+		}
+
+		.big_needle, .small_needle {
+			display: none;
+		}
+
+		a {
+			color: $text;
+		}
+	}
+}
+
+.forum {
+	position: relative;
+	margin: 0 1.5rem;
+
+	background-size: 100% auto;
+	background-position: bottom;
+	background-repeat: no-repeat;
+
+	@include ratio(52%);
+
+	.content__forum & {
+		z-index: 2;
+		background: none;
+		background-image: none!important;
+
+		.cate {
+			width: calc(50% - 0.5rem)!important;
+		}
+
+		& > div {
+			position: static;
+		}
+
+		&::before {
+			content: none;
+		}
+	}
+
+	&:nth-child(0n + 2) {
+		background-image: url('../img/bg_premiers_pas.jpg');
+
+		.cate {
+			width: calc(33% - 0.33rem);
+		}
+	}
+
+	&:nth-child(0n + 4) {
+		background-image: url('../img/bg_cours.jpg');
+
+		.forum__wrapper {
+			&::before {
+				content:'';
+				@include position(absolute, 20% 25.4% 48% 45%);
+
+				background: url('../img/bg_table_1.png') no-repeat;
+				background-size: 80% auto;
+				background-position: left center;
+			}
+
+			&--table2 {
+				&::before {
+					background: url('../img/bg_table_2.png') no-repeat;
+					background-size: 60% auto;
+					background-position: 40% 20%;
+				}
+			}
+
+			&--table3 {
+				&::before {
+					background: url('../img/bg_table_3.png') no-repeat;
+					background-size: 55% auto;
+					background-position: 25% 80%;
+				}
+			}
+
+			&--table4 {
+				&::before {
+					background: url('../img/bg_table_4.png') no-repeat;
+					background-size: 30% auto;
+					background-position: 10% 20%;
+				}
+			}
+
+			&--table5 {
+				&::before {
+					background: url('../img/bg_table_5.png') no-repeat;
+					background-size: 70% auto;
+					background-position: 95% 20%;
+				}
+			}
+
+			&--table6 {
+				&::before {
+					background: url('../img/bg_table_6.png') no-repeat;
+					background-size: 50% auto;
+					background-position: 20% 90%;
+				}
+			}
+		}
+	}
+
+	&:nth-child(0n + 6) {
+		background-image: url('../img/bg_biblio.jpg');
+	}
+
+	&:nth-child(0n + 8) {
+		.cate {
+			width: calc(33% - 0.33rem);
+		}
+
+		.forum__title {
+			align-items: flex-start;
+			top: 4rem;
+		}
+
+		&::after {
+			content: '';
+			@include position(absolute, null 0 44.5vw 50%);
+			z-index: -1;
+			height: 2.5vw;
+			width: 100vw;
+			background: url('../img/grass.png') repeat-x;
+			background-size: auto 100%;
+			background-position: bottom;
+
+			transform: translateX(-50%);
+		}
+	}
+
+	&:nth-child(0n + 10) {
+		padding-top: 4vw;
+
+		.cate {
+			width: calc(33% - 0.33rem);
+		}
+
+		.forum__title {
+			align-items: flex-end;
+			bottom: 1rem;
+		}
+
+		& > div {
+			position: static;
+		}
+
+		&::before {
+			content: '';
+			@include position(absolute, 0 null null 50%);
+			z-index: -2;
+			height: 200vw;
+			width: 100vw;
+			padding: 0;
+
+			background: url('../img/ground.jpg') repeat;
+
+			transform: translateX(-50%);
+		}
+	}
+
+	&:nth-child(0n + 12) {
+		margin-top: 6vw;
+
+		& > div {
+			position: static;
+		}
+
+		&::before {
+			content: none;
+		}
+	}
+}
+
+.forum__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-content: flex-start;
+
+	padding: 0 1rem;
+}
+
+.forum__title {
+	display: flex;
+	align-items: center;
+
+	@include position(absolute, 0 null 0 -1.5vw);
+	width: 1.4vw;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	.content__forum & {
+		@include position(absolute, -4.5rem 50% auto auto);
+		width: auto;
+		transform: translateX(50%);
+
+		h2 {
+			font-family: $Cursive;
+			font-size: 4rem;
+			font-weight: normal;
+		}
+	}
+}
+
+.forum__title__text {
+	overflow: hidden;
+    position: absolute;
+    width: 1px!important;
+    height: 1px!important;
+    clip: rect(1px,1px,1px,1px);
+}
+
+.forum__separation {
+	width: 100%;
+	height: 3vw;
+	background-color: $bg_separation;
+	border-radius: 0.6vw;
+
+	.content__forum & {
+		display: none;
+	}
+
+	&:nth-child(0n + 7) {
+		background-image: url('../img/subbiblio.png');
+		background-position: bottom;
+		background-repeat: repeat-x;
+		background-size: auto 100%;
+		background-color: $bg_separation2;
+	}
+
+	&:nth-child(0n + 9) {
+		@include position(absolute, null null null 50%);
+		z-index: -1;
+		width: 100vw;
+		height: 45vw;
+
+		background-image: url('../img/bg_extras.png');
+		background-position: -2vw 85%;
+		background-repeat: no-repeat;
+		background-size: 110% auto;
+		background-color: $grass;
+
+		transform: translate(-50%, -100%);
+
+		&::before {
+			content: '';
+			@include position(absolute, -32vw 77% -null 0);
+			z-index: -1;
+			height: 36vw;
+			background: url('../img/tree.png') no-repeat;
+			background-size: 100% auto;
+			background-position: left bottom;
+		}
+
+		&::after {
+			content: '';
+			@include position(absolute, null 0 -1vw 0);
+			z-index: -1;
+			height: 2.5vw;
+			background: url('../img/subgrass.png') repeat-x;
+			background-size: auto 100%;
+			background-position: left bottom;
+		}
+	}
+
+	&:nth-child(0n + 11), &:nth-child(0n + 13){
+		display: none;
+	}
+}
+
+.leaf__anim {
+	@include position(absolute, -25vw null null 50%);
+	z-index: 10;
+	width: 100vw;
+	transform: translateX(-50%);
+	pointer-events: none;
+}
+
+
+// Cates
+
+.cate {
+	position: relative;
+	z-index: 1;
+	width: calc(50% - 0.5rem);
+	margin-bottom: 1rem;
+
+	&--new {
+		a, a:visited, a:link { color: $link_forum_new; }
+		.cate__wrapper { background-color: $bg_forum_new; }
+		.cate__subforums { background-color: $bg_subforum_new; }
+	}
+}
+
+.cate__title {
+	margin-bottom: -2rem;
+
+	font-family: $Cursive;
+	font-size: 4rem;
+	font-weight: normal;
+	line-height: 1.5;
+	text-align: center;
+	color: $text;
+
+	a, a:visited, a:link {
+		color: $text;
+
+		&:hover {
+			text-decoration: none!important;
+		}
+	}
+
+	@include maxw($x-wide) {
+		margin-bottom: -1.5rem;
+		font-size: 3rem;
+	}
+
+	@include maxw($wide) {
+		margin-bottom: -1.25rem;
+		font-size: 2.5rem;
+	}
+
+	@include maxw($small) {
+		margin-bottom: -1rem;
+		font-size: 2rem;
+	}
+}
+
+.cate__wrapper {
+	display: flex;
+	flex-direction: column;
+
+	height: 11vw;
+	padding-top: 0.5rem;
+	padding-bottom: 0;
+	background-color: $bg_forum_old;
+
+	@include maxw($x-small) {
+		height: 15vw;
+	}
+}
+
+.cate__infos {
+	padding: 0 1rem;
+	font-size: 1rem;
+	text-align: center;
+	color: $info_forum;
+}
+
+.cate__subforums {
+	padding: 0.5rem 1rem;
+	background-color: $bg_subforum_old;
+	font-size: 1.1rem;
+	text-align: right;
+}
+
+.cate__last {
+	padding: 0.5rem 1rem;
+	margin-top: 1rem;
+	font-size: 1rem;
+
+	br {
+		display: none;
+	}
+
+	span {
+		> * {
+			margin-left: 0.5rem;
+
+			&:first-child {
+				margin-left: 0;
+				margin-right: 0.5rem;
+			}
+		}
+	}
+}
+
+.cate__description {
+	overflow: auto;
+
+	height: 100%;
+	padding: 0 1rem;
+	margin-top: 0.2rem;
+	text-align: center;
+}
