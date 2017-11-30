@@ -10,14 +10,16 @@ body {
 		background-size: cover;
 	}
 
-	#page-header, .page-footer, #qeel {
+	.navbar, .page-footer, #qeel {
 		display: none;
 	}
 }
 
 .index__cate {
+	display: none;
 
-	&--first {
+	&--1 {
+		display: block;
 		@include position(absolute, -9% 5% -9% 30%);
 
 		&::before {
@@ -38,6 +40,24 @@ body {
 			background-size: contain;
 			background-position: center center;
 			pointer-events: none;
+
+			transform-origin: 50.3% 51.8%;
+			animation: animBigRond 2s $ease-out-cubic;
+		}
+	}
+
+	&--2 {
+		display: block;
+		@include position(absolute, 50%  70% 5% 5%);
+
+		&::after {
+			content: '';
+			@include position(absolute, 0);
+			z-index: 11;
+			background: url('images/small_rond.png') no-repeat;
+			background-size: contain;
+			background-position: center center;
+			pointer-events: none;
 		}
 	}
 }
@@ -54,11 +74,11 @@ body {
 	transition: 1s filter $ease-out-cubic;
 
 	.index__forum--open & {
-		filter: saturate(100%);
+		filter: saturate(150%);
 	}
 
 	&--inactive, .index__forum--close & {
-		filter: saturate(0%);
+		filter: saturate(10%);
 
 		&--hover {
 			filter: saturate(100%);
@@ -82,6 +102,27 @@ body {
 	.index__forum--3 & {
 		z-index: 2;
 		background: url('images/event.png') no-repeat;
+		background-size: contain;
+		background-position: center;
+	}
+
+	.index__forum--5 & {
+		z-index: 3;
+		background: url('images/zone_admin.png') no-repeat;
+		background-size: contain;
+		background-position: center;
+	}
+
+	.index__forum--6 & {
+		z-index: 2;
+		background: url('images/zone_context.png') no-repeat;
+		background-size: contain;
+		background-position: center;
+	}
+
+	.index__forum--discord & {
+		z-index: 1;
+		background: url('images/zone_discord.png') no-repeat;
 		background-size: contain;
 		background-position: center;
 	}
@@ -119,6 +160,30 @@ body {
 		width: 30%;
 		transform: translate(-50%, -50%);
 	}
+
+	.index__forum--5 & {
+		@include ratio(50%);
+		@include position(absolute, 25% null null 50%);
+		z-index: 23;
+		width: 90%;
+		transform: translate(-50%, -50%);
+	}
+
+	.index__forum--6 & {
+		@include ratio(175%);
+		@include position(absolute, 60% 2% null null);
+		z-index: 22;
+		width: 45%;
+		transform: translate(0, -50%);
+	}
+
+	.index__forum--discord & {
+		@include ratio(75%);
+		@include position(absolute, 80% 65% null null);
+		z-index: 21;
+		width: 45%;
+		transform: translate(50%, -50%);
+	}
 }
 
 .index__forum__ctn {
@@ -143,6 +208,10 @@ body {
 		z-index: 30;
 		opacity: 1;
 		pointer-events: all;
+	}
+
+	.index__cate--2 & {
+		background: none;
 	}
 }
 
@@ -170,6 +239,11 @@ body {
 		@include position(absolute, null 0 0 0);
 		height: 1px;
 		background-color: $zorba;
+	}
+
+	.index__cate--2 & {
+		margin: 0 7.5%;
+		font-size: 1.5rem;
 	}
 }
 
@@ -212,5 +286,9 @@ body {
 		.icon-subforum {
 			background-color: $sand_dune;			
 		}
+	}
+
+	.index__cate--2 & {
+		width: 100%;
 	}
 }

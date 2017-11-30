@@ -12,19 +12,25 @@ export default class Home {
     constructor() {
 
         this.$els = {
-            forums: $('.index__forum'),
-            forumsBg: $('.index__forum__bg'),
-            forumsBtn: $('.index__forum__btn'),
+            forums1: $('.index__cate--1 .index__forum'),
+            forumsBg1: $('.index__cate--1 .index__forum__bg'),
+            forumsBtn1: $('.index__cate--1 .index__forum__btn'),
+            forums2: $('.index__cate--2 .index__forum'),
+            forumsBg2: $('.index__cate--2 .index__forum__bg'),
+            forumsBtn2: $('.index__cate--2 .index__forum__btn'),
         }
 
         this.bindEvents()
     }
 
      bindEvents() {
+        this.$els.forumsBtn1.on('mouseover', (e) => this.hoverForumsBtn(e, true, this.$els.forumsBg1))
+        this.$els.forumsBtn1.on('mouseout', (e) => this.hoverForumsBtn(e, false, this.$els.forumsBg1))
+        this.$els.forumsBtn1.on('click', (e) => this.clickForumsBtn(e, this.$els.forums1))
 
-        this.$els.forumsBtn.on('mouseover', (e) => this.hoverForumsBtn(e, true))
-        this.$els.forumsBtn.on('mouseout', (e) => this.hoverForumsBtn(e, false))
-        this.$els.forumsBtn.on('click', (e) => this.clickForumsBtn(e))
+        this.$els.forumsBtn2.on('mouseover', (e) => this.hoverForumsBtn(e, true, this.$els.forumsBg2))
+        this.$els.forumsBtn2.on('mouseout', (e) => this.hoverForumsBtn(e, false, this.$els.forumsBg2))
+        this.$els.forumsBtn2.on('click', (e) => this.clickForumsBtn(e, this.$els.forums2))
      }
 
 
@@ -33,28 +39,28 @@ export default class Home {
     /* Actions
     ---------------------------------------------------------*/
 
-    hoverForumsBtn(event, enter) {
+    hoverForumsBtn(event, enter, forumsBg) {
         if(enter) {
-            this.$els.forumsBg.addClass('index__forum__bg--inactive')
+            forumsBg.addClass('index__forum__bg--inactive')
             $(event.currentTarget).prev().removeClass('index__forum__bg--inactive')
             $(event.currentTarget).prev().addClass('index__forum__bg--hover')
         }
         else {
-            this.$els.forumsBg.removeClass('index__forum__bg--inactive')
-            this.$els.forumsBg.removeClass('index__forum__bg--hover')
+            forumsBg.removeClass('index__forum__bg--inactive')
+            forumsBg.removeClass('index__forum__bg--hover')
         }
     }
 
-    clickForumsBtn(event) {
+    clickForumsBtn(event, forums) {
         let target = $(event.currentTarget).parent()
 
         if(target.hasClass('index__forum--open')) {
             target.removeClass('index__forum--open')
-            this.$els.forums.removeClass('index__forum--close')
+            forums.removeClass('index__forum--close')
         }
         else {
-            this.$els.forums.removeClass('index__forum--open')
-            this.$els.forums.addClass('index__forum--close')
+            forums.removeClass('index__forum--open')
+            forums.addClass('index__forum--close')
             target.removeClass('index__forum--close')
             target.addClass('index__forum--open')
         }

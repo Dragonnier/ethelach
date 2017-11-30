@@ -2,7 +2,12 @@
 
 {% for forum in forumrow %}
 	{% if loop.first %}
-		<section class="index__cate index__cate--first">
+		{% set nbCate = 1 %}
+		<section class="index__cate index__cate--{{ nbCate }}">
+	{% elseif (forum.S_IS_CAT and not forum.S_FIRST_ROW) or forum.S_NO_CAT %}
+		{% set nbCate = nbCate + 1 %}
+		</section>
+		<section class="index__cate index__cate--{{ nbCate }}">
 	{% endif %}
 
 	{% if not forum.S_IS_CAT %}
@@ -22,6 +27,24 @@
 									<i class="icon-subforum" aria-hidden="true"></i>{sub.SUBFORUM_NAME}</a></li>
 							{% endfor %}
 						{% endif %}
+					</ul>
+				</div>
+			</div>
+		</section>
+	{% endif %}
+
+	{% if loop.index0 == 6 %}
+		<section class="index__forum index__forum--discord">
+			<div class="index__forum__bg index__forum__bg--active"></div>
+			<button class="index__forum__btn" type="button">Discord</button>
+			<div class="index__forum__ctn">
+				<div class="index__forum__content">
+					<a href="#" class="index__forum__title">Discord</a>
+					<div class="index__forum__description">
+						Bla Discord
+					</div>
+					<ul class="index__forum__subforums">
+						
 					</ul>
 				</div>
 			</div>
